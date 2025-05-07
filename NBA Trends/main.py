@@ -4,7 +4,6 @@ from scipy.stats import pearsonr, chi2_contingency
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-import codecademylib3
 np.set_printoptions(suppress=True, precision = 2)
 
 nba = pd.read_csv('./nba_games.csv')
@@ -43,8 +42,8 @@ def compare_team_scores(nba_data, year, team1, team2, color1="dodgerblue", color
     # Create a new figure for each call
     plt.figure()
 
-    plt.hist(team1_pts, alpha=opacity, normed=True, label=team1, color=color1)
-    plt.hist(team2_pts, alpha=opacity, normed=True, label=team2, color=color2)
+    plt.hist(team1_pts, alpha=opacity, density=True, label=team1, color=color1)
+    plt.hist(team2_pts, alpha=opacity, density=True, label=team2, color=color2)
     plt.legend()
     plt.title(f"{year} Season")
     plt.show()
