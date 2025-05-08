@@ -4,9 +4,9 @@ This repository contains a collection of data science projects completed as part
 
 ## Projects
 
-1. [NBA Trends Analysis](./NBA_Trends/) - Statistical analysis of NBA game data exploring team performance metrics, home court advantage, and forecasting accuracy.
+1. [NBA Trends Analysis](./NBA Trends/) - Statistical analysis of NBA game data exploring team performance metrics, home court advantage, and forecasting accuracy.
 
-## Skills Demonstrated
+## Skills
 
 - **Data Manipulation**: Using pandas for data wrangling and preparation
 - **Statistical Analysis**: Hypothesis testing, correlation analysis, and descriptive statistics
@@ -28,9 +28,7 @@ This repository contains a collection of data science projects completed as part
 Each project folder contains its own README with specific instructions. For general setup:
 
 1. Clone this repository
-2. Create a virtual environment (see [environment setup guide](./environment_setup.md))
-3. Install the required packages using the requirements.txt file
-4. Navigate to individual project folders for project-specific instructions
+2. Navigate to individual project folders for project-specific instructions
 
 ## Contact
 

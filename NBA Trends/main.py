@@ -60,7 +60,7 @@ def plot_team_boxplot(nba_data, year):
     plt.clf()
     
     nba_year = nba_data[nba_data.year_id == year]
-    sns.boxplot(data=nba_year, x='fran_id', y='pts')
+    sns.boxplot(data=nba_year, x='fran_id', y='pts', palette='Set3')  # Other predefined palettes are: 'husl', 'rainbow'
     plt.title(f"Points per team in {year} Season")
     plt.show()
 

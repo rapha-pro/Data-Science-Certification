@@ -70,9 +70,16 @@ The analysis was implemented using Python with the following libraries:
 - `scipy.stats` for statistical tests (Pearson correlation, chi-square)
 - `matplotlib` and `seaborn` for data visualization
 
+## Future Work
+
+Potential extensions to this analysis include:
+- Expanding the dataset to include additional seasons for trend analysis
+- Incorporating player-level statistics to identify key contributors
+- Applying machine learning models to predict game outcomes based on historical data
+
 ## How to Run This Project
 
-1. Ensure you have Python 3.x installed
+1. Ensure you have Python 3.9+ installed
 2. Set up a virtual environment (see instructions below)
 3. Install required dependencies from `requirements.txt`
 4. Run the Jupyter notebook or Python script
@@ -95,13 +102,6 @@ source venv/bin/activate
 # Install dependencies
 pip install -r requirements.txt
 ```
-
-## Future Work
-
-Potential extensions to this analysis include:
-- Expanding the dataset to include additional seasons for trend analysis
-- Incorporating player-level statistics to identify key contributors
-- Applying machine learning models to predict game outcomes based on historical data
 
 ## References
 
