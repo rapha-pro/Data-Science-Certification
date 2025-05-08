@@ -4,6 +4,7 @@ from scipy.stats import pearsonr, chi2_contingency
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+
 np.set_printoptions(suppress=True, precision = 2)
 
 nba = pd.read_csv('./nba_games.csv')
@@ -20,23 +21,23 @@ print(nba_base_yr.head())
 print(nba_target_yr.head())
 
 
-# 1, 2 & 3. Association between quantitave and categorical variable 
+# 1, 2 & 3. Association between quantitave and categorical variable
 # (team and year)
 def compare_team_scores(nba_data, year, team1, team2, color1="dodgerblue", color2="orange", opacity=0.8):
     # Filter data for the specified year
     nba_year = nba_data[nba_data.year_id == year]
-    
+
     # Extract points for each team
     team1_pts = nba_year.pts[nba_year.fran_id == team1]
     team2_pts = nba_year.pts[nba_year.fran_id == team2]
-    
+
     # Calculate the difference in means
     team1_mean_score = np.mean(team1_pts)
     team2_mean_score = np.mean(team2_pts)
     diff_means = team1_mean_score - team2_mean_score
-    
+
     print(f"\nDifference in means for {year}: {diff_means}")
-    
+
     # Visualize the difference with histograms
 
     # Create a new figure for each call
@@ -58,9 +59,9 @@ compare_team_scores(nba, target_year, 'Knicks', 'Nets', color1='magenta', color2
 def plot_team_boxplot(nba_data, year):
     # Clear the current figure
     plt.clf()
-    
+
     nba_year = nba_data[nba_data.year_id == year]
-    sns.boxplot(data=nba_year, x='fran_id', y='pts', palette='Set3')  # Other predefined palettes are: 'husl', 'rainbow'
+    sns.boxplot(data=nba_year, x='fran_id', y='pts', palette='rainbow')  # Other predefined palettes are: 'husl', 'Set3'
     plt.title(f"Points per team in {year} Season")
     plt.show()
 
@@ -93,7 +94,7 @@ point_diff_forecast_corr, pvalue = pearsonr(nba_base_yr.forecast, nba_base_yr.po
 print(f"Correlation = {round(point_diff_forecast_corr, 2)}")
 
 # 11. Scatter plot of correlation between forecast and point_diff
-plt.clf() 
+plt.clf()
 plt.scatter('forecast', 'point_diff', data=nba_base_yr)
 plt.xlabel('Forecasted Win Probability')
 plt.ylabel('Point Differential')
